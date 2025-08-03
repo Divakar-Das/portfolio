@@ -1,32 +1,35 @@
-import {
-  Box,
-  Container,
-  Typography,
-  Card,
-  CardContent,
-  CardMedia,
-  Button,
-  Chip,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Slide,
-  Zoom,
-} from '@mui/material';
-import {
-  GitHub as GitHubIcon,
-  Launch as LaunchIcon,
-  Close as CloseIcon,
-} from '@mui/icons-material';
 import { useState, useEffect } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Github, ExternalLink, X } from 'lucide-react';
+
+// Import project images
+import ecommerce1 from '@/assets/projects/ecommerce-1.jpg';
+import ecommerce2 from '@/assets/projects/ecommerce-2.jpg';
+import weather1 from '@/assets/projects/weather-1.jpg';
+import weather2 from '@/assets/projects/weather-2.jpg';
+import task1 from '@/assets/projects/task-1.jpg';
+import task2 from '@/assets/projects/task-2.jpg';
+import portfolio1 from '@/assets/projects/portfolio-1.jpg';
+import portfolio2 from '@/assets/projects/portfolio-2.jpg';
+import recipe1 from '@/assets/projects/recipe-1.jpg';
+import recipe2 from '@/assets/projects/recipe-2.jpg';
+import expense1 from '@/assets/projects/expense-1.jpg';
+import expense2 from '@/assets/projects/expense-2.jpg';
+import movie1 from '@/assets/projects/movie-1.jpg';
+import movie2 from '@/assets/projects/movie-2.jpg';
+import chat1 from '@/assets/projects/chat-1.jpg';
+import chat2 from '@/assets/projects/chat-2.jpg';
 
 interface Project {
   id: number;
   title: string;
   description: string;
   fullDescription: string;
-  image: string;
+  images: string[];
   technologies: string[];
   githubLink: string;
   demoLink: string;
@@ -45,9 +48,9 @@ const Projects = () => {
       id: 1,
       title: 'E-Commerce Platform',
       description: 'Modern responsive e-commerce website with shopping cart functionality',
-      fullDescription: 'A full-featured e-commerce platform built with React and Material-UI. Features include product browsing, shopping cart, user authentication, and responsive design. Implemented modern UI/UX principles with smooth animations and intuitive navigation.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'Material-UI', 'JavaScript', 'CSS3'],
+      fullDescription: 'A full-featured e-commerce platform built with React and modern UI components. Features include product browsing, shopping cart, user authentication, and responsive design. Implemented modern UI/UX principles with smooth animations and intuitive navigation.',
+      images: [ecommerce1, ecommerce2],
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Shadcn/ui'],
       githubLink: 'https://github.com/alexjohnson/ecommerce-platform',
       demoLink: 'https://ecommerce-demo.netlify.app',
     },
@@ -56,8 +59,8 @@ const Projects = () => {
       title: 'Weather Dashboard',
       description: 'Real-time weather app with location-based forecasts',
       fullDescription: 'Interactive weather dashboard that provides real-time weather information and 5-day forecasts. Built with React and integrates with OpenWeatherMap API. Features include geolocation support, responsive design, and beautiful weather animations.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'API Integration', 'Responsive Design'],
+      images: [weather1, weather2],
+      technologies: ['React', 'API Integration', 'Responsive Design', 'Chart.js'],
       githubLink: 'https://github.com/alexjohnson/weather-dashboard',
       demoLink: 'https://weather-app-demo.netlify.app',
     },
@@ -66,8 +69,8 @@ const Projects = () => {
       title: 'Task Management App',
       description: 'Collaborative task manager with real-time updates',
       fullDescription: 'A comprehensive task management application with features like task creation, assignment, progress tracking, and team collaboration. Built with modern React patterns and state management.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'State Management', 'Local Storage'],
+      images: [task1, task2],
+      technologies: ['React', 'State Management', 'Local Storage', 'Drag & Drop'],
       githubLink: 'https://github.com/alexjohnson/task-manager',
       demoLink: 'https://task-manager-demo.netlify.app',
     },
@@ -75,9 +78,9 @@ const Projects = () => {
       id: 4,
       title: 'Portfolio Website',
       description: 'Personal portfolio showcasing projects and skills',
-      fullDescription: 'Responsive portfolio website built with React and Material-UI. Features smooth animations, dark theme, and optimized performance. Showcases various projects and technical skills with modern design principles.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'Material-UI', 'Responsive Design'],
+      fullDescription: 'Responsive portfolio website built with React and modern design principles. Features smooth animations, dark theme, and optimized performance. Showcases various projects and technical skills with modern design principles.',
+      images: [portfolio1, portfolio2],
+      technologies: ['React', 'Tailwind CSS', 'Responsive Design', 'Animations'],
       githubLink: 'https://github.com/alexjohnson/portfolio',
       demoLink: 'https://alex-portfolio.netlify.app',
     },
@@ -86,8 +89,8 @@ const Projects = () => {
       title: 'Recipe Finder',
       description: 'Search and save your favorite recipes with nutritional info',
       fullDescription: 'Recipe discovery application with search functionality, nutritional information, and favorites system. Integrates with recipe APIs and provides detailed cooking instructions.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'API Integration', 'Local Storage'],
+      images: [recipe1, recipe2],
+      technologies: ['React', 'API Integration', 'Local Storage', 'Search'],
       githubLink: 'https://github.com/alexjohnson/recipe-finder',
       demoLink: 'https://recipe-finder-demo.netlify.app',
     },
@@ -96,8 +99,8 @@ const Projects = () => {
       title: 'Expense Tracker',
       description: 'Personal finance tracker with charts and analytics',
       fullDescription: 'Comprehensive expense tracking application with data visualization, category management, and financial analytics. Built with React and Chart.js for interactive graphs.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'Chart.js', 'Data Visualization'],
+      images: [expense1, expense2],
+      technologies: ['React', 'Chart.js', 'Data Visualization', 'Local Storage'],
       githubLink: 'https://github.com/alexjohnson/expense-tracker',
       demoLink: 'https://expense-tracker-demo.netlify.app',
     },
@@ -106,8 +109,8 @@ const Projects = () => {
       title: 'Movie Database',
       description: 'Browse and search movies with detailed information',
       fullDescription: 'Movie discovery platform with search functionality, detailed movie information, ratings, and reviews. Integrates with TMDB API for comprehensive movie data.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'TMDB API', 'Search Functionality'],
+      images: [movie1, movie2],
+      technologies: ['React', 'TMDB API', 'Search Functionality', 'Responsive Design'],
       githubLink: 'https://github.com/alexjohnson/movie-database',
       demoLink: 'https://movie-db-demo.netlify.app',
     },
@@ -116,8 +119,8 @@ const Projects = () => {
       title: 'Chat Application',
       description: 'Real-time messaging app with modern UI',
       fullDescription: 'Real-time chat application with user authentication, message history, and responsive design. Built with React and implements modern messaging UI patterns.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'Real-time Features', 'UI/UX'],
+      images: [chat1, chat2],
+      technologies: ['React', 'Real-time Features', 'UI/UX', 'WebSocket'],
       githubLink: 'https://github.com/alexjohnson/chat-app',
       demoLink: 'https://chat-app-demo.netlify.app',
     },
@@ -132,225 +135,152 @@ const Projects = () => {
   };
 
   return (
-    <Box
-      sx={{
-        minHeight: '100vh',
-        pt: { xs: 10, md: 12 },
-        pb: 8,
-        background: 'linear-gradient(135deg, hsl(220, 13%, 8%) 0%, hsl(220, 13%, 10%) 100%)',
-      }}
-    >
-      <Container maxWidth="lg">
-        <Slide direction="down" in={loaded} timeout={600}>
-          <Box sx={{ textAlign: 'center', mb: 8 }}>
-            <Typography
-              variant="h2"
-              sx={{
-                mb: 2,
-                background: 'linear-gradient(135deg, hsl(214, 84%, 56%), hsl(264, 84%, 56%))',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                fontWeight: 700,
-              }}
-            >
-              My Projects
-            </Typography>
-            <Typography
-              variant="h5"
-              sx={{
-                color: 'text.secondary',
-                maxWidth: '600px',
-                mx: 'auto',
-                fontWeight: 400,
-              }}
-            >
-              A collection of projects showcasing my frontend development skills
-            </Typography>
-          </Box>
-        </Slide>
+    <div className="min-h-screen pt-20 pb-12 bg-background">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="text-center mb-12 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+            My Projects
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            A collection of projects showcasing my frontend development skills
+          </p>
+        </div>
 
-        <Box 
-          sx={{ 
-            display: 'grid',
-            gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' },
-            gap: 4 
-          }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <Zoom
+            <Card
               key={project.id}
-              in={loaded}
-              timeout={400 + index * 100}
+              className="group cursor-pointer border-border bg-card hover:bg-card/80 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 animate-fade-in"
+              style={{ animationDelay: `${index * 100}ms` }}
+              onClick={() => handleProjectClick(project)}
             >
-              <Card
-                sx={{
-                  cursor: 'pointer',
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  background: 'linear-gradient(145deg, hsl(220, 13%, 11%), hsl(220, 13%, 13%))',
-                  border: '1px solid hsl(220, 13%, 18%)',
-                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                  '&:hover': {
-                    transform: 'translateY(-8px)',
-                    boxShadow: '0 0 30px hsl(214, 84%, 56%, 0.3)',
-                  },
-                }}
-                onClick={() => handleProjectClick(project)}
-              >
-                <CardMedia
-                  component="img"
-                  height="200"
-                  image={project.image}
+              <div className="aspect-video overflow-hidden rounded-t-lg">
+                <img
+                  src={project.images[0]}
                   alt={project.title}
-                  sx={{
-                    backgroundColor: 'hsl(220, 13%, 15%)',
-                    objectFit: 'cover',
-                  }}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <CardContent sx={{ flexGrow: 1, p: 3 }}>
-                  <Typography
-                    variant="h5"
-                    sx={{
-                      mb: 2,
-                      color: 'primary.main',
-                      fontWeight: 600,
-                    }}
-                  >
-                    {project.title}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      mb: 3,
-                      color: 'text.secondary',
-                      lineHeight: 1.6,
-                    }}
-                  >
-                    {project.description}
-                  </Typography>
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                    {project.technologies.map((tech) => (
-                      <Chip
-                        key={tech}
-                        label={tech}
-                        size="small"
-                        sx={{
-                          backgroundColor: 'hsl(220, 13%, 15%)',
-                          color: 'text.primary',
-                          border: '1px solid hsl(220, 13%, 20%)',
-                          fontSize: '0.75rem',
-                        }}
-                      />
-                    ))}
-                  </Box>
-                </CardContent>
-              </Card>
-            </Zoom>
+              </div>
+              <CardHeader className="pb-3">
+                <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
+                  {project.title}
+                </CardTitle>
+                <CardDescription className="text-muted-foreground line-clamp-2">
+                  {project.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <div className="flex flex-wrap gap-1">
+                  {project.technologies.slice(0, 3).map((tech) => (
+                    <Badge key={tech} variant="secondary" className="text-xs">
+                      {tech}
+                    </Badge>
+                  ))}
+                  {project.technologies.length > 3 && (
+                    <Badge variant="outline" className="text-xs">
+                      +{project.technologies.length - 3}
+                    </Badge>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
           ))}
-        </Box>
-      </Container>
+        </div>
+      </div>
 
       {/* Project Detail Dialog */}
-      <Dialog
-        open={Boolean(selectedProject)}
-        onClose={handleCloseDialog}
-        maxWidth="md"
-        fullWidth
-        PaperProps={{
-          sx: {
-            background: 'linear-gradient(145deg, hsl(220, 13%, 11%), hsl(220, 13%, 13%))',
-            border: '1px solid hsl(220, 13%, 18%)',
-            borderRadius: 2,
-          },
-        }}
-      >
-        {selectedProject && (
-          <>
-            <DialogTitle
-              sx={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                color: 'primary.main',
-                fontSize: '1.5rem',
-                fontWeight: 600,
-              }}
-            >
-              {selectedProject.title}
+      <Dialog open={Boolean(selectedProject)} onOpenChange={handleCloseDialog}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <div className="flex items-center justify-between">
+              <DialogTitle className="text-2xl font-bold text-foreground">
+                {selectedProject?.title}
+              </DialogTitle>
               <Button
+                variant="ghost"
+                size="icon"
                 onClick={handleCloseDialog}
-                sx={{ minWidth: 'auto', p: 1 }}
+                className="h-8 w-8"
               >
-                <CloseIcon />
+                <X className="h-4 w-4" />
               </Button>
-            </DialogTitle>
-            <DialogContent>
-              <Typography
-                variant="body1"
-                sx={{
-                  mb: 3,
-                  color: 'text.primary',
-                  lineHeight: 1.6,
-                }}
-              >
-                {selectedProject.fullDescription}
-              </Typography>
-              <Box sx={{ mb: 3 }}>
-                <Typography
-                  variant="h6"
-                  sx={{ mb: 2, color: 'primary.main' }}
-                >
-                  Technologies Used:
-                </Typography>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                  {selectedProject.technologies.map((tech) => (
-                    <Chip
-                      key={tech}
-                      label={tech}
-                      sx={{
-                        backgroundColor: 'hsl(220, 13%, 15%)',
-                        color: 'text.primary',
-                        border: '1px solid hsl(220, 13%, 20%)',
-                      }}
-                    />
+            </div>
+          </DialogHeader>
+          
+          {selectedProject && (
+            <div className="space-y-6">
+              {/* Image Carousel */}
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {selectedProject.images.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="aspect-video overflow-hidden rounded-lg">
+                        <img
+                          src={image}
+                          alt={`${selectedProject.title} - Screenshot ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
                   ))}
-                </Box>
-              </Box>
-            </DialogContent>
-            <DialogActions sx={{ p: 3, pt: 0 }}>
-              <Button
-                variant="outlined"
-                startIcon={<GitHubIcon />}
-                href={selectedProject.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{
-                  borderColor: 'primary.main',
-                  color: 'primary.main',
-                  '&:hover': {
-                    backgroundColor: 'primary.main',
-                    color: 'primary.contrastText',
-                  },
-                }}
-              >
-                View Code
-              </Button>
-              <Button
-                variant="contained"
-                startIcon={<LaunchIcon />}
-                href={selectedProject.demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Live Demo
-              </Button>
-            </DialogActions>
-          </>
-        )}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+
+              {/* Project Description */}
+              <div>
+                <p className="text-muted-foreground leading-relaxed">
+                  {selectedProject.fullDescription}
+                </p>
+              </div>
+
+              {/* Technologies */}
+              <div>
+                <h3 className="text-lg font-semibold mb-3 text-foreground">
+                  Technologies Used
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.technologies.map((tech) => (
+                    <Badge key={tech} variant="secondary">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                <Button
+                  variant="outline"
+                  className="flex items-center gap-2"
+                  asChild
+                >
+                  <a
+                    href={selectedProject.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="h-4 w-4" />
+                    View Code
+                  </a>
+                </Button>
+                <Button className="flex items-center gap-2" asChild>
+                  <a
+                    href={selectedProject.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Live Demo
+                  </a>
+                </Button>
+              </div>
+            </div>
+          )}
+        </DialogContent>
       </Dialog>
-    </Box>
+    </div>
   );
 };
 
