@@ -190,7 +190,8 @@ const Projects = () => {
 
       {/* Project Detail Dialog */}
       <Dialog open={Boolean(selectedProject)} onOpenChange={handleCloseDialog}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-4xl max-h-[80vh] mt-16 overflow-hidden">
+          <div className="overflow-y-auto max-h-full pr-2">
           <DialogHeader>
             <div className="flex items-center justify-between">
               <DialogTitle className="text-2xl font-bold text-foreground">
@@ -278,6 +279,7 @@ const Projects = () => {
               </div>
             </div>
           )}
+          </div>
         </DialogContent>
       </Dialog>
     </div>
