@@ -33,26 +33,15 @@ import chat1 from '@/assets/projects/chat-1.jpg';
 import chat2 from '@/assets/projects/chat-2.jpg';
 import chat3 from '@/assets/projects/chat-3.jpg';
 
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  fullDescription: string;
-  images: string[];
-  technologies: string[];
-  githubLink: string;
-  demoLink: string;
-}
-
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProject, setSelectedProject] = useState(null);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     setLoaded(true);
   }, []);
 
-  const projects: Project[] = [
+  const projects = [
     {
       id: 1,
       title: 'E-Commerce Platform',
@@ -135,7 +124,7 @@ const Projects = () => {
     },
   ];
 
-  const handleProjectClick = (project: Project) => {
+  const handleProjectClick = (project) => {
     setSelectedProject(project);
   };
 
