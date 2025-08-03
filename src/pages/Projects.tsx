@@ -191,22 +191,13 @@ const Projects = () => {
       {/* Project Detail Dialog */}
       <Dialog open={Boolean(selectedProject)} onOpenChange={handleCloseDialog}>
         <DialogContent className="max-w-4xl max-h-[80vh] mt-16 overflow-hidden">
-          <div className="overflow-y-auto max-h-full pr-2">
           <DialogHeader>
-            <div className="flex items-center justify-between">
-              <DialogTitle className="text-2xl font-bold text-foreground">
-                {selectedProject?.title}
-              </DialogTitle>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={handleCloseDialog}
-                className="h-8 w-8"
-              >
-                <X className="h-4 w-4" />
-              </Button>
-            </div>
+            <DialogTitle className="text-2xl font-bold text-foreground">
+              {selectedProject?.title}
+            </DialogTitle>
           </DialogHeader>
+          
+          <div className="overflow-y-auto max-h-[calc(80vh-120px)] pr-2">
           
           {selectedProject && (
             <div className="space-y-6">
