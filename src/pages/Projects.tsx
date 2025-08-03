@@ -9,20 +9,29 @@ import { Github, ExternalLink, X } from 'lucide-react';
 // Import project images
 import ecommerce1 from '@/assets/projects/ecommerce-1.jpg';
 import ecommerce2 from '@/assets/projects/ecommerce-2.jpg';
+import ecommerce3 from '@/assets/projects/ecommerce-3.jpg';
+import ecommerce4 from '@/assets/projects/ecommerce-4.jpg';
 import weather1 from '@/assets/projects/weather-1.jpg';
 import weather2 from '@/assets/projects/weather-2.jpg';
+import weather3 from '@/assets/projects/weather-3.jpg';
 import task1 from '@/assets/projects/task-1.jpg';
 import task2 from '@/assets/projects/task-2.jpg';
+import task3 from '@/assets/projects/task-3.jpg';
 import portfolio1 from '@/assets/projects/portfolio-1.jpg';
 import portfolio2 from '@/assets/projects/portfolio-2.jpg';
+import portfolio3 from '@/assets/projects/portfolio-3.jpg';
 import recipe1 from '@/assets/projects/recipe-1.jpg';
 import recipe2 from '@/assets/projects/recipe-2.jpg';
+import recipe3 from '@/assets/projects/recipe-3.jpg';
 import expense1 from '@/assets/projects/expense-1.jpg';
 import expense2 from '@/assets/projects/expense-2.jpg';
+import expense3 from '@/assets/projects/expense-3.jpg';
 import movie1 from '@/assets/projects/movie-1.jpg';
 import movie2 from '@/assets/projects/movie-2.jpg';
+import movie3 from '@/assets/projects/movie-3.jpg';
 import chat1 from '@/assets/projects/chat-1.jpg';
 import chat2 from '@/assets/projects/chat-2.jpg';
+import chat3 from '@/assets/projects/chat-3.jpg';
 
 interface Project {
   id: number;
@@ -49,7 +58,7 @@ const Projects = () => {
       title: 'E-Commerce Platform',
       description: 'Modern responsive e-commerce website with shopping cart functionality',
       fullDescription: 'A full-featured e-commerce platform built with React and modern UI components. Features include product browsing, shopping cart, user authentication, and responsive design. Implemented modern UI/UX principles with smooth animations and intuitive navigation.',
-      images: [ecommerce1, ecommerce2],
+      images: [ecommerce1, ecommerce2, ecommerce3, ecommerce4],
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Shadcn/ui'],
       githubLink: 'https://github.com/alexjohnson/ecommerce-platform',
       demoLink: 'https://ecommerce-demo.netlify.app',
@@ -59,7 +68,7 @@ const Projects = () => {
       title: 'Weather Dashboard',
       description: 'Real-time weather app with location-based forecasts',
       fullDescription: 'Interactive weather dashboard that provides real-time weather information and 5-day forecasts. Built with React and integrates with OpenWeatherMap API. Features include geolocation support, responsive design, and beautiful weather animations.',
-      images: [weather1, weather2],
+      images: [weather1, weather2, weather3],
       technologies: ['React', 'API Integration', 'Responsive Design', 'Chart.js'],
       githubLink: 'https://github.com/alexjohnson/weather-dashboard',
       demoLink: 'https://weather-app-demo.netlify.app',
@@ -69,7 +78,7 @@ const Projects = () => {
       title: 'Task Management App',
       description: 'Collaborative task manager with real-time updates',
       fullDescription: 'A comprehensive task management application with features like task creation, assignment, progress tracking, and team collaboration. Built with modern React patterns and state management.',
-      images: [task1, task2],
+      images: [task1, task2, task3],
       technologies: ['React', 'State Management', 'Local Storage', 'Drag & Drop'],
       githubLink: 'https://github.com/alexjohnson/task-manager',
       demoLink: 'https://task-manager-demo.netlify.app',
@@ -79,7 +88,7 @@ const Projects = () => {
       title: 'Portfolio Website',
       description: 'Personal portfolio showcasing projects and skills',
       fullDescription: 'Responsive portfolio website built with React and modern design principles. Features smooth animations, dark theme, and optimized performance. Showcases various projects and technical skills with modern design principles.',
-      images: [portfolio1, portfolio2],
+      images: [portfolio1, portfolio2, portfolio3],
       technologies: ['React', 'Tailwind CSS', 'Responsive Design', 'Animations'],
       githubLink: 'https://github.com/alexjohnson/portfolio',
       demoLink: 'https://alex-portfolio.netlify.app',
@@ -89,7 +98,7 @@ const Projects = () => {
       title: 'Recipe Finder',
       description: 'Search and save your favorite recipes with nutritional info',
       fullDescription: 'Recipe discovery application with search functionality, nutritional information, and favorites system. Integrates with recipe APIs and provides detailed cooking instructions.',
-      images: [recipe1, recipe2],
+      images: [recipe1, recipe2, recipe3],
       technologies: ['React', 'API Integration', 'Local Storage', 'Search'],
       githubLink: 'https://github.com/alexjohnson/recipe-finder',
       demoLink: 'https://recipe-finder-demo.netlify.app',
@@ -99,7 +108,7 @@ const Projects = () => {
       title: 'Expense Tracker',
       description: 'Personal finance tracker with charts and analytics',
       fullDescription: 'Comprehensive expense tracking application with data visualization, category management, and financial analytics. Built with React and Chart.js for interactive graphs.',
-      images: [expense1, expense2],
+      images: [expense1, expense2, expense3],
       technologies: ['React', 'Chart.js', 'Data Visualization', 'Local Storage'],
       githubLink: 'https://github.com/alexjohnson/expense-tracker',
       demoLink: 'https://expense-tracker-demo.netlify.app',
@@ -109,7 +118,7 @@ const Projects = () => {
       title: 'Movie Database',
       description: 'Browse and search movies with detailed information',
       fullDescription: 'Movie discovery platform with search functionality, detailed movie information, ratings, and reviews. Integrates with TMDB API for comprehensive movie data.',
-      images: [movie1, movie2],
+      images: [movie1, movie2, movie3],
       technologies: ['React', 'TMDB API', 'Search Functionality', 'Responsive Design'],
       githubLink: 'https://github.com/alexjohnson/movie-database',
       demoLink: 'https://movie-db-demo.netlify.app',
@@ -119,7 +128,7 @@ const Projects = () => {
       title: 'Chat Application',
       description: 'Real-time messaging app with modern UI',
       fullDescription: 'Real-time chat application with user authentication, message history, and responsive design. Built with React and implements modern messaging UI patterns.',
-      images: [chat1, chat2],
+      images: [chat1, chat2, chat3],
       technologies: ['React', 'Real-time Features', 'UI/UX', 'WebSocket'],
       githubLink: 'https://github.com/alexjohnson/chat-app',
       demoLink: 'https://chat-app-demo.netlify.app',
