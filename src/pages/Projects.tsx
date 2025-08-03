@@ -197,7 +197,7 @@ const Projects = () => {
             </DialogTitle>
           </DialogHeader>
           
-          <div className="overflow-y-auto max-h-[calc(80vh-120px)] pr-2">
+          <div className="overflow-y-auto overflow-x-hidden max-h-[calc(80vh-120px)] pr-2">
           
           {selectedProject && (
             <div className="space-y-6">
