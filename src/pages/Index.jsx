@@ -26,8 +26,7 @@ const Index = () => {
   }, []);
 
   const skills = [
-    'HTML5', 'CSS3', 'JavaScript', 'React', 'TypeScript', 
-    'Git', 'Material-UI', 'Responsive Design', 'REST APIs'
+    'HTML5', 'CSS3', 'JavaScript', 'React','Git', 'Material-UI', 'Responsive Design', 'REST APIs'
   ];
 
   const handleResumeDownload = () => {
@@ -71,7 +70,7 @@ const Index = () => {
                     fontSize: { xs: '2.5rem', md: '3.5rem' },
                   }}
                 >
-                  Hi, I'm Alex Johnson
+                  Hi, I'm Divakar S
                 </Typography>
                 
                 <Typography
@@ -95,7 +94,7 @@ const Index = () => {
                     fontSize: '1.1rem',
                   }}
                 >
-                  Fresher Frontend Developer | React Enthusiast | Open to Opportunities
+                  Fresher Developer | React and Full Stack Enthusiast | Open to Opportunities
                 </Typography>
 
                 {/* Skills */}
@@ -142,7 +141,7 @@ const Index = () => {
                     py: 1.5,
                   }}
                 >
-                  Download Resume
+                  Download My Resume
                 </Button>
               </Box>
             </Slide>
