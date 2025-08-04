@@ -53,8 +53,8 @@ const Index = () => {
             display: 'flex',
             flexDirection: { xs: 'column-reverse', md: 'row' },
             alignItems: 'center',
-            gap: 6,
-            mb: 8
+            mb: 8,
+            gap: "25px"
           }}
         >
 
@@ -132,6 +132,7 @@ const Index = () => {
                     ))}
                   </Box>
                 </Box>
+
 
                 {/* Resume Button */}
                 <Button
@@ -268,7 +269,7 @@ const Index = () => {
                   LinkedIn
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                  linkedin.com/in/divakar07 
+                  linkedin.com/in/divakar07
                 </Typography>
               </Paper>
               <Paper
@@ -295,12 +296,40 @@ const Index = () => {
                   GitHub
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                   github.com/Divakar-Das
+                  github.com/Divakar-Das
                 </Typography>
               </Paper>
+
+
             </Box>
           </Box>
         </Slide>
+        <Paper
+          sx={{
+            p: 3,
+            marginTop: "30px",
+            textAlign: 'center',
+            background: 'linear-gradient(145deg, hsl(220, 13%, 11%), hsl(220, 13%, 13%))',
+            border: '1px solid hsl(220, 13%, 18%)',
+            transition: 'all 0.3s ease',
+            '&:hover': {
+              transform: 'translateY(-4px)',
+              boxShadow: '0 0 30px hsl(214, 84%, 56%, 0.2)',
+            },
+          }}
+        >
+          <Typography variant="h3" sx={{ mb: 2, color: 'primary.main', fontWeight: 600 }}>
+            Location Info
+          </Typography>
+          <Box sx={{ textAlign: { xs: 'start', md: 'center' } }} >
+            <Typography variant="body2" sx={{ color: 'white', fontSize: { xs: '1rem', md: '1.3rem' }, mb: 1 }}>
+              <strong>Current Location :</strong> Chennai, Tamil Nadu
+            </Typography>
+            <Typography variant="body2" sx={{ color: 'white', fontSize: { xs: '1rem', md: '1.3rem' }, mb: 1 }}>
+              <strong>Native Location :</strong> Mayiladuthurai, Tamil Nadu
+            </Typography>
+          </Box>
+        </Paper>
       </Container>
     </Box>
   );

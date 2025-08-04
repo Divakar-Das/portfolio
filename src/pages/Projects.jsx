@@ -15,40 +15,30 @@ import {
   Slide,
   Stack,
 } from '@mui/material';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink, Calendar1 } from 'lucide-react';
 
-import ecommerce1 from '@/assets/projects/ecommerce-1.jpg';
-import ecommerce2 from '@/assets/projects/ecommerce-2.jpg';
-import ecommerce3 from '@/assets/projects/ecommerce-3.jpg';
-import ecommerce4 from '@/assets/projects/ecommerce-4.jpg';
-import weather1 from '@/assets/projects/weather-1.jpg';
-import weather2 from '@/assets/projects/weather-2.jpg';
-import weather3 from '@/assets/projects/weather-3.jpg';
-import weather4 from '@/assets/projects/weather-4.jpg';
-import task1 from '@/assets/projects/task-1.jpg';
-import task2 from '@/assets/projects/task-2.jpg';
-import task3 from '@/assets/projects/task-3.jpg';
-import task4 from '@/assets/projects/task-4.jpg';
-import portfolio1 from '@/assets/projects/portfolio-1.jpg';
-import portfolio2 from '@/assets/projects/portfolio-2.jpg';
-import portfolio3 from '@/assets/projects/portfolio-3.jpg';
-import portfolio4 from '@/assets/projects/portfolio-4.jpg';
-import recipe1 from '@/assets/projects/recipe-1.jpg';
-import recipe2 from '@/assets/projects/recipe-2.jpg';
-import recipe3 from '@/assets/projects/recipe-3.jpg';
-import recipe4 from '@/assets/projects/recipe-4.jpg';
-import expense1 from '@/assets/projects/expense-1.jpg';
-import expense2 from '@/assets/projects/expense-2.jpg';
-import expense3 from '@/assets/projects/expense-3.jpg';
-import expense4 from '@/assets/projects/expense-4.jpg';
-import movie1 from '@/assets/projects/movie-1.jpg';
-import movie2 from '@/assets/projects/movie-2.jpg';
-import movie3 from '@/assets/projects/movie-3.jpg';
-import movie4 from '@/assets/projects/movie-4.jpg';
-import chat1 from '@/assets/projects/chat-1.jpg';
-import chat2 from '@/assets/projects/chat-2.jpg';
-import chat3 from '@/assets/projects/chat-3.jpg';
-import chat4 from '@/assets/projects/chat-4.jpg';
+import ecommerce1 from '@/assets/projects/ecommerce-1.png';
+import ecommerce2 from '@/assets/projects/ecommerce-2.png';
+import ecommerce3 from '@/assets/projects/ecommerce-3.png';
+import ecommerce4 from '@/assets/projects/ecommerce-4.png';
+
+import crud1 from "@/assets/projects/crud1.png"
+import crud2 from "@/assets/projects/crud2.png"
+import crud3 from "@/assets/projects/crud3.png"
+import crud4 from "@/assets/projects/crud4.png"
+
+import calendar1 from "@/assets/projects/calendar1.png"
+import calendar2 from "@/assets/projects/calendar2.png"
+import calendar3 from "@/assets/projects/calendar3.png"
+import calendar4 from "@/assets/projects/calendar4.png"
+
+import xo1 from "@/assets/projects/xo1.png"
+import xo2 from "@/assets/projects/xo2.png"
+import xo3 from "@/assets/projects/xo3.png"
+import xo4 from "@/assets/projects/xo4.png"
+
+import rps1 from "@/assets/projects/rps1.png"
+
 import { StackedBarChartRounded } from '@mui/icons-material';
 
 
@@ -63,84 +53,54 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Modern responsive e-commerce website with shopping cart functionality',
-      fullDescription: 'A full-featured e-commerce platform built with React...',
+      title: 'Amazon-Clone-Ecommerce-Website',
+      description: 'Built a fully responsive e-commerce website inspired by Amazon using React and Material UI for a clean, modern UI.',
+      fullDescription: 'Implemented sign-up and login forms with regex validation to ensure proper user input.Used Redux for global state management (e.g., user info, product data). Integrated APIs using Axios, and added interceptors to manage loading screens and handle request errors.Applied lazy loading to improve performance by loading components only when needed.Created structured category and subcategory views for better product navigation. Designed with mobile-first principles to ensure smooth use across all devices.',
       images: [ecommerce1, ecommerce2, ecommerce3, ecommerce4],
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Shadcn/ui'],
-      githubLink: 'https://github.com/alexjohnson/ecommerce-platform',
-      demoLink: 'https://ecommerce-demo.netlify.app',
+      technologies: ['React', 'Material UI', 'JavaScript', 'HTML/CSS', 'Redux', 'axios', 'REST APIs'],
+      githubLink: 'https://github.com/Divakar-Das/amozon',
+      demoLink: 'https://ecommerce-amozon.netlify.app/landing',
     },
     {
       id: 2,
-      title: 'Weather Dashboard',
-      description: 'Real-time weather app with location-based forecasts',
-      fullDescription: 'Interactive weather dashboard that provides real-time weather information...',
-      images: [weather1, weather2, weather3, weather4],
-      technologies: ['React', 'API Integration', 'Responsive Design', 'Chart.js'],
-      githubLink: 'https://github.com/alexjohnson/weather-dashboard',
-      demoLink: 'https://weather-app-demo.netlify.app',
+      title: 'Javascript CRUD',
+      description: 'This project has strong logical code. I have included regular expressions (regex) for validating input fields. You can store images and all other data into local storage.',
+      fullDescription: 'This project demonstrates my understanding of JavaScript logic, local storage usage, and form validation techniques. It’s a great example of how to build a dynamic and interactive web application without using a backend. The update and delete features help manage the data efficiently, making it user-friendly and practical for real-time use.',
+      images: [crud1, crud2, crud3, crud4],
+      technologies: ['JavaScript', 'HTML/CSS', 'Responsive Design', 'localstorage'],
+      githubLink: 'https://github.com/Divakar-Das/javascript_CRUD',
+      demoLink: 'https://javascriptcrudop.netlify.app/',
     },
     {
       id: 3,
-      title: 'Task Management App',
-      description: 'Collaborative task manager with real-time updates',
-      fullDescription: 'A comprehensive task management application with features like task creation...',
-      images: [task1, task2, task3, task4],
-      technologies: ['React', 'State Management', 'Local Storage', 'Drag & Drop'],
-      githubLink: 'https://github.com/alexjohnson/task-manager',
+      title: 'Clinic Calendar App - React Project',
+      description: 'Developed a responsive and user-friendly clinic scheduling app using React and JavaScript',
+      fullDescription: 'Dynamic calendar with daily, weekly, and monthly views Appointment booking and scheduling Clean and intuitive UI/UX Fully responsive design for mobile and desktop',
+      images: [calendar2, calendar1, calendar3, calendar4],
+      technologies: ['React', 'Material UI', 'JavaScript', 'React-Calender-Library', 'Local Storage'],
+      githubLink: 'https://github.com/Divakar-Das/clinic-calendar-app',
       demoLink: 'https://task-manager-demo.netlify.app',
     },
     {
       id: 4,
-      title: 'Portfolio Website',
-      description: 'Personal portfolio showcasing projects and skills',
-      fullDescription: 'Responsive portfolio website built with React...',
-      images: [portfolio1, portfolio2, portfolio3, portfolio4],
-      technologies: ['React', 'Tailwind CSS', 'Responsive Design', 'Animations'],
-      githubLink: 'https://github.com/alexjohnson/portfolio',
-      demoLink: 'https://alex-portfolio.netlify.app',
+      title: 'Tic Tac Toe',
+      description: 'Built a Tic Tac Toe game with a sleek and modern design using HTML, CSS, and JavaScript!',
+      fullDescription: 'XO Game is a responsive web-based Tic-Tac-Toe application built using HTML, CSS, and JavaScript. It allows two players to take turns placing X and O in a 3x3 grid with instant win/tie detection. The layout adjusts smoothly across all screen sizes for an engaging user experience.',
+      images: [xo1, xo2, xo3, xo4],
+      technologies: ['JavaScript', 'HTML', 'CSS', 'Game Logics'],
+      githubLink: 'https://github.com/Divakar-Das/FrontendDevelopment/tree/main/xo',
+      demoLink: 'https://xo3301.netlify.app',
     },
     {
       id: 5,
-      title: 'Recipe Finder',
-      description: 'Search and save your favorite recipes with nutritional info',
-      fullDescription: 'Recipe discovery application with search functionality...',
-      images: [recipe1, recipe2, recipe3, recipe4],
-      technologies: ['React', 'API Integration', 'Local Storage', 'Search'],
-      githubLink: 'https://github.com/alexjohnson/recipe-finder',
-      demoLink: 'https://recipe-finder-demo.netlify.app',
-    },
-    {
-      id: 6,
-      title: 'Expense Tracker',
-      description: 'Personal finance tracker with charts and analytics',
-      fullDescription: 'Comprehensive expense tracking application with data visualization...',
-      images: [expense1, expense2, expense3, expense4],
-      technologies: ['React', 'Chart.js', 'Data Visualization', 'Local Storage'],
-      githubLink: 'https://github.com/alexjohnson/expense-tracker',
-      demoLink: 'https://expense-tracker-demo.netlify.app',
-    },
-    {
-      id: 7,
-      title: 'Movie Database',
-      description: 'Browse and search movies with detailed information',
-      fullDescription: 'Movie discovery platform with search functionality...',
-      images: [movie1, movie2, movie3, movie4],
-      technologies: ['React', 'TMDB API', 'Search Functionality', 'Responsive Design'],
-      githubLink: 'https://github.com/alexjohnson/movie-database',
-      demoLink: 'https://movie-db-demo.netlify.app',
-    },
-    {
-      id: 8,
-      title: 'Chat Application',
-      description: 'Real-time messaging app with modern UI',
-      fullDescription: 'Real-time chat application with user authentication...',
-      images: [chat1, chat2, chat3, chat4],
-      technologies: ['React', 'Real-time Features', 'UI/UX', 'WebSocket'],
-      githubLink: 'https://github.com/alexjohnson/chat-app',
-      demoLink: 'https://chat-app-demo.netlify.app',
-    },
+      title: 'Rock Paper Scissor',
+      description: 'A responsive Rock Paper Scissors game built with HTML, CSS, and JavaScript featuring an attractive theme and smooth gameplay.',
+      fullDescription: 'This is a visually appealing Rock Paper Scissors game developed using HTML, CSS, and JavaScript. It includes animations, instant result logic, and a clean, responsive layout. Designed to provide an engaging and fun user experience across all devices.',
+      images: [rps1],
+      technologies: ['JavaScript', 'HTML', 'CSS', 'Game Logics'],
+      githubLink: 'https://github.com/Divakar-Das/FrontendDevelopment/tree/main/rps',
+      demoLink: 'https://rps3301.netlify.app/',
+    }
   ];
 
   return (
@@ -168,9 +128,10 @@ const Projects = () => {
                 maxWidth: '600px',
                 mx: 'auto',
                 fontWeight: 400,
+                padding: "0 5px",
               }}
             >
-              A collection of projects showcasing my frontend development skills
+              A collection of projects showcasing my development skills
             </Typography>
           </Box>
         </Slide>
@@ -231,19 +192,36 @@ const Projects = () => {
             <DialogContent sx={{ bgcolor: '#1a1b1e', color: '#fff' }}>
               <DialogTitle>{selectedProject.title}</DialogTitle>
               <Box sx={{
-                display:"grid",
-                gridTemplateColumns:{
-                  xs:"1fr",
-                  sm:"1fr 1fr",
-                  lg:"1fr 1fr 1fr"
-                },
-                justifyContent: "center",
+                // display: "grid",
+                // gridTemplateColumns: {
+                //   xs: "1fr",
+                //   sm: "1fr 1fr",
+                // },
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "start",
                 alignItems: "center",
-                gap:"10px"
+                gap: " 15px 30px",
+                placeContent: "center"
               }} spacing={2}>
                 {selectedProject.images.map((img, idx) => (
                   <Grid item xs={6} key={idx}>
-                    <img src={img} alt={selectedProject.title} style={{ width: '100%',height:"30vh",objectFit:"cover", borderRadius: 8 }} />
+                    <Box
+                      component="img"
+                      src={img}
+                      alt={selectedProject.title}
+                      sx={{
+                        width: { xs: "auto", md: 300 },
+                        height: { xs: 200, md: 170 },
+                        objectFit: { xs: "cover", md: "contain" },
+                        background: "#000000d0",
+                        borderRadius: 1,
+                        border: '2px solid #ccc',
+                        display: 'block',
+                        maxWidth: '100%',
+                        mx: 'auto',
+                      }}
+                    />
                   </Grid>
                 ))}
               </Box>
@@ -259,6 +237,9 @@ const Projects = () => {
               </Box>
               <Box mt={3} display="flex" gap={2}>
                 <Button
+                  sx={{
+                    padding: { xs: "5px 10px" },
+                  }}
                   variant="outlined"
                   color="primary"
                   href={selectedProject.githubLink}
@@ -268,6 +249,9 @@ const Projects = () => {
                   View Code
                 </Button>
                 <Button
+                  sx={{
+                    padding: { xs: "5px 10px" }
+                  }}
                   variant="contained"
                   color="primary"
                   href={selectedProject.demoLink}

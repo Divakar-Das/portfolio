@@ -25,8 +25,8 @@ const About = () => {
   const techStack = {
     frontend: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'TypeScript', 'React.js', 'Material UI', 'Bootstrap', 'Responsive Web Design'],
     backend: ['Java ', 'Node.js', 'Express.js', 'RESTful APIs', 'SQL'],
-    versionControl: ['Git', 'GitHub'],
     tools: ['VS Code', 'Eclipse IDE', 'Postman', 'Chrome DevTools', 'SonarQube'],
+    versionControl: ['Git', 'GitHub'],
     otherSkills: ['DOM Manipulation', 'API Integration', 'React Hooks', 'JSON'],
     softSkills: ['Problem-Solving', 'Team Collaboration', 'Agile Methodologies', 'Adaptability']
   };
@@ -35,8 +35,8 @@ const About = () => {
   const categorizedSkills = [
     { title: 'Frontend', icon: <CodeIcon sx={{ fontSize: 32, color: 'primary.main', mr: 2 }} />, data: techStack.frontend },
     { title: 'Backend', icon: <CodeIcon sx={{ fontSize: 32, color: 'secondary.main', mr: 2 }} />, data: techStack.backend },
-    { title: 'Version Control', icon: <RocketIcon sx={{ fontSize: 32, color: 'info.main', mr: 2 }} />, data: techStack.versionControl },
     { title: 'Tools & IDEs', icon: <RocketIcon sx={{ fontSize: 32, color: 'secondary.main', mr: 2 }} />, data: techStack.tools },
+    { title: 'Version Control', icon: <RocketIcon sx={{ fontSize: 32, color: 'info.main', mr: 2 }} />, data: techStack.versionControl },
     { title: 'Other Technical Skills', icon: <PsychologyIcon sx={{ fontSize: 32, color: 'warning.main', mr: 2 }} />, data: techStack.otherSkills },
     { title: 'Soft Skills', icon: <PsychologyIcon sx={{ fontSize: 32, color: 'success.main', mr: 2 }} />, data: techStack.softSkills }
   ];
@@ -193,8 +193,7 @@ const About = () => {
                 }}
               >
                 <strong>Bachelor's in Computer Application (BCA) </strong><br />
-                SASTRA Deemed to be University | 2021-2024<br />
-                Relevant coursework: Java full stack development
+                SASTRA Deemed to be University, Kumbakonam | 2021-2024<br />
               </Typography>
               <Typography
                 variant="body1"
