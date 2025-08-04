@@ -23,19 +23,45 @@ const About = () => {
   }, []);
 
   const techStack = {
-    frontend: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React', 'Material-UI', 'Tailwind CSS'],
-    tools: ['Git', 'GitHub', 'VS Code', 'Figma', 'Chrome DevTools', 'npm/yarn'],
-    learning: ['Node.js', 'Next.js', 'Python', 'MongoDB', 'GraphQL'],
+    frontend: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'TypeScript', 'React.js', 'Material UI', 'Bootstrap', 'Responsive Web Design'],
+    backend: ['Java ', 'Node.js', 'Express.js', 'RESTful APIs', 'SQL'],
+    versionControl: ['Git', 'GitHub'],
+    tools: ['VS Code', 'Eclipse IDE', 'Postman', 'Chrome DevTools', 'SonarQube'],
+    otherSkills: ['DOM Manipulation', 'API Integration', 'React Hooks', 'JSON'],
+    softSkills: ['Problem-Solving', 'Team Collaboration', 'Agile Methodologies', 'Adaptability']
   };
 
-  const interests = [
-    'Frontend Development',
-    'UI/UX Design',
-    'Open Source',
-    'Tech Blogging',
-    'Problem Solving',
-    'Continuous Learning',
+
+  const categorizedSkills = [
+    { title: 'Frontend', icon: <CodeIcon sx={{ fontSize: 32, color: 'primary.main', mr: 2 }} />, data: techStack.frontend },
+    { title: 'Backend', icon: <CodeIcon sx={{ fontSize: 32, color: 'secondary.main', mr: 2 }} />, data: techStack.backend },
+    { title: 'Version Control', icon: <RocketIcon sx={{ fontSize: 32, color: 'info.main', mr: 2 }} />, data: techStack.versionControl },
+    { title: 'Tools & IDEs', icon: <RocketIcon sx={{ fontSize: 32, color: 'secondary.main', mr: 2 }} />, data: techStack.tools },
+    { title: 'Other Technical Skills', icon: <PsychologyIcon sx={{ fontSize: 32, color: 'warning.main', mr: 2 }} />, data: techStack.otherSkills },
+    { title: 'Soft Skills', icon: <PsychologyIcon sx={{ fontSize: 32, color: 'success.main', mr: 2 }} />, data: techStack.softSkills }
   ];
+
+
+
+  const groupedInterests = {
+    'Tech Interests': [
+      'Full Stack Development',
+      'Frontend Development',
+      'React App Development',
+      'Web Development',
+      'Software Development',
+      'Problem Solving',
+      'Continuous Learning',
+    ],
+    'Hobbies': [
+      'Watching Movies',
+      'Playing Video Games',
+      'Watching Cricket',
+      "Playing Cricket",
+      "Watching youtube Videos",
+    ]
+  };
+
 
   return (
     <Box
@@ -71,13 +97,13 @@ const About = () => {
                 fontWeight: 400,
               }}
             >
-              Get to know more about my journey and passion for frontend development
+              Get to know more about my journey and passion
             </Typography>
           </Box>
         </Slide>
 
-        <Box 
-          sx={{ 
+        <Box
+          sx={{
             display: 'grid',
             gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
             gap: 6,
@@ -113,9 +139,7 @@ const About = () => {
                   mb: 3,
                 }}
               >
-                I'm a passionate frontend developer with a strong foundation in modern web technologies. 
-                My journey began with curiosity about how websites work, which led me to dive deep into 
-                HTML, CSS, and JavaScript.
+                I’m a BCA graduate with a strong foundation in both frontend and backend technologies. I completed a Java Full Stack Development course at Besant Technologies, where I gained hands-on experience with tools like React, Java, Node.js, and MySQL.
               </Typography>
               <Typography
                 variant="body1"
@@ -125,9 +149,7 @@ const About = () => {
                   mb: 3,
                 }}
               >
-                I love creating user interfaces that are not only functional but also beautiful and 
-                intuitive. Every project is an opportunity to learn something new and push the 
-                boundaries of what's possible with code.
+                I also built projects like an Amazon clone and a weather app, which taught me API integration, responsive design, and component-based development. Additionally, I completed a full stack internship where I worked on real-time applications.
               </Typography>
               <Typography
                 variant="body1"
@@ -136,8 +158,7 @@ const About = () => {
                   lineHeight: 1.7,
                 }}
               >
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open-source projects, or sharing my knowledge through tech blogs and community forums.
+                I'm now ready to contribute to real-world software solutions by writing clean, efficient, and user-focused code.
               </Typography>
             </Paper>
           </Slide>
@@ -171,9 +192,9 @@ const About = () => {
                   mb: 3,
                 }}
               >
-                <strong>Bachelor's in Computer Science</strong><br />
-                XYZ University | 2020-2024<br />
-                Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems
+                <strong>Bachelor's in Computer Application (BCA) </strong><br />
+                SASTRA Deemed to be University | 2021-2024<br />
+                Relevant coursework: Java full stack development
               </Typography>
               <Typography
                 variant="body1"
@@ -184,9 +205,7 @@ const About = () => {
                 }}
               >
                 <strong>Career Goals:</strong><br />
-                My goal is to join a dynamic team where I can contribute to meaningful projects 
-                while continuing to grow as a developer. I'm particularly interested in companies 
-                that value innovation and user experience.
+                My goal is to join a dynamic team where I can contribute to meaningful projects and build scalable, user-focused applications using modern technologies, while continuously growing as a full stack developer.
               </Typography>
               <Typography
                 variant="body1"
@@ -195,180 +214,17 @@ const About = () => {
                   lineHeight: 1.7,
                 }}
               >
-                I'm eager to take on challenging projects that will help me develop my skills 
-                in modern frontend frameworks and contribute to products that make a real impact.
+                I'm eager to take on challenging projects that help me grow my skills in modern technologies and contribute to products that create real impact.
               </Typography>
             </Paper>
           </Slide>
         </Box>
-
         {/* Tech Stack Section */}
         <Slide direction="up" in={loaded} timeout={1000}>
-          <Box>
-            <Typography
-              variant="h3"
-              sx={{
-                mb: 6,
-                textAlign: 'center',
-                color: 'primary.main',
-                fontWeight: 600,
-              }}
-            >
-              Technical Skills
-            </Typography>
-            
-            <Box 
-              sx={{ 
-                display: 'grid',
-                gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
-                gap: 4,
-                mb: 8
-              }}
-            >
-              {/* Frontend Technologies */}
-              <Paper
-                sx={{
-                  p: 4,
-                  height: '100%',
-                  background: 'linear-gradient(145deg, hsl(220, 13%, 11%), hsl(220, 13%, 13%))',
-                  border: '1px solid hsl(220, 13%, 18%)',
-                  transition: 'all 0.3s ease',
-                  '&:hover': {
-                    transform: 'translateY(-4px)',
-                    boxShadow: '0 0 30px hsl(214, 84%, 56%, 0.2)',
-                  },
-                }}
-              >
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-                  <CodeIcon sx={{ fontSize: 32, color: 'primary.main', mr: 2 }} />
-                  <Typography variant="h5" sx={{ color: 'primary.main', fontWeight: 600 }}>
-                    Frontend
-                  </Typography>
-                </Box>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                  {techStack.frontend.map((tech, index) => (
-                    <Zoom
-                      key={tech}
-                      in={loaded}
-                      timeout={500 + index * 100}
-                    >
-                      <Chip
-                        label={tech}
-                        sx={{
-                          backgroundColor: 'hsl(220, 13%, 15%)',
-                          color: 'text.primary',
-                          border: '1px solid hsl(220, 13%, 20%)',
-                          '&:hover': {
-                            borderColor: 'primary.main',
-                            backgroundColor: 'primary.main',
-                            color: 'primary.contrastText',
-                          },
-                          transition: 'all 0.3s ease',
-                        }}
-                      />
-                    </Zoom>
-                  ))}
-                </Box>
-              </Paper>
 
-              {/* Tools */}
-              <Paper
-                sx={{
-                  p: 4,
-                  height: '100%',
-                  background: 'linear-gradient(145deg, hsl(220, 13%, 11%), hsl(220, 13%, 13%))',
-                  border: '1px solid hsl(220, 13%, 18%)',
-                  transition: 'all 0.3s ease',
-                  '&:hover': {
-                    transform: 'translateY(-4px)',
-                    boxShadow: '0 0 30px hsl(214, 84%, 56%, 0.2)',
-                  },
-                }}
-              >
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-                  <RocketIcon sx={{ fontSize: 32, color: 'secondary.main', mr: 2 }} />
-                  <Typography variant="h5" sx={{ color: 'secondary.main', fontWeight: 600 }}>
-                    Tools
-                  </Typography>
-                </Box>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                  {techStack.tools.map((tool, index) => (
-                    <Zoom
-                      key={tool}
-                      in={loaded}
-                      timeout={700 + index * 100}
-                    >
-                      <Chip
-                        label={tool}
-                        sx={{
-                          backgroundColor: 'hsl(220, 13%, 15%)',
-                          color: 'text.primary',
-                          border: '1px solid hsl(220, 13%, 20%)',
-                          '&:hover': {
-                            borderColor: 'secondary.main',
-                            backgroundColor: 'secondary.main',
-                            color: 'secondary.contrastText',
-                          },
-                          transition: 'all 0.3s ease',
-                        }}
-                      />
-                    </Zoom>
-                  ))}
-                </Box>
-              </Paper>
-
-              {/* Currently Learning */}
-              <Paper
-                sx={{
-                  p: 4,
-                  height: '100%',
-                  background: 'linear-gradient(145deg, hsl(220, 13%, 11%), hsl(220, 13%, 13%))',
-                  border: '1px solid hsl(220, 13%, 18%)',
-                  transition: 'all 0.3s ease',
-                  '&:hover': {
-                    transform: 'translateY(-4px)',
-                    boxShadow: '0 0 30px hsl(214, 84%, 56%, 0.2)',
-                  },
-                }}
-              >
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-                  <PsychologyIcon sx={{ fontSize: 32, color: 'warning.main', mr: 2 }} />
-                  <Typography variant="h5" sx={{ color: 'warning.main', fontWeight: 600 }}>
-                    Learning
-                  </Typography>
-                </Box>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                  {techStack.learning.map((tech, index) => (
-                    <Zoom
-                      key={tech}
-                      in={loaded}
-                      timeout={900 + index * 100}
-                    >
-                      <Chip
-                        label={tech}
-                        sx={{
-                          backgroundColor: 'hsl(220, 13%, 15%)',
-                          color: 'text.primary',
-                          border: '1px solid hsl(220, 13%, 20%)',
-                          '&:hover': {
-                            borderColor: 'warning.main',
-                            backgroundColor: 'warning.main',
-                            color: 'warning.contrastText',
-                          },
-                          transition: 'all 0.3s ease',
-                        }}
-                      />
-                    </Zoom>
-                  ))}
-                </Box>
-              </Paper>
-            </Box>
-          </Box>
-        </Slide>
-
-        {/* Interests Section */}
-        <Slide direction="up" in={loaded} timeout={1200}>
           <Box sx={{ textAlign: 'center' }}>
+
+
             <Typography
               variant="h3"
               sx={{
@@ -377,38 +233,130 @@ const About = () => {
                 fontWeight: 600,
               }}
             >
-              Interests & Hobbies
+              Tech Stacks
             </Typography>
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, justifyContent: 'center' }}>
-              {interests.map((interest, index) => (
-                <Zoom
-                  key={interest}
-                  in={loaded}
-                  timeout={800 + index * 150}
+
+
+
+            <Box
+              sx={{
+                display: 'grid',
+                gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: 'repeat(3, 1fr)' },
+                gap: 4,
+                mb: 8
+              }}
+            >
+
+              {categorizedSkills.map((category, index) => (
+                <Paper
+                  key={category.title}
+                  sx={{
+                    p: 4,
+                    height: '100%',
+                    background: 'linear-gradient(145deg, hsl(220, 13%, 11%), hsl(220, 13%, 13%))',
+                    border: '1px solid hsl(220, 13%, 18%)',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      transform: 'translateY(-4px)',
+                      boxShadow: '0 0 30px hsl(214, 84%, 56%, 0.2)',
+                    },
+                  }}
                 >
-                  <Chip
-                    label={interest}
-                    sx={{
-                      fontSize: '1rem',
-                      px: 2,
-                      py: 1,
-                      backgroundColor: 'hsl(220, 13%, 15%)',
-                      color: 'text.primary',
-                      border: '1px solid hsl(220, 13%, 20%)',
-                      '&:hover': {
-                        borderColor: 'primary.main',
-                        backgroundColor: 'primary.main',
-                        color: 'primary.contrastText',
-                        transform: 'translateY(-2px)',
-                        boxShadow: '0 4px 15px hsl(214, 84%, 56%, 0.3)',
-                      },
-                      transition: 'all 0.3s ease',
-                    }}
-                  />
-                </Zoom>
+                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                    {category.icon}
+                    <Typography variant="h5" sx={{ color: 'primary.main', fontWeight: 600 }}>
+                      {category.title}
+                    </Typography>
+                  </Box>
+                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                    {category.data.map((item, i) => (
+                      <Zoom key={item} in={loaded} timeout={600 + i * 100}>
+                        <Chip
+                          label={item}
+                          sx={{
+                            backgroundColor: 'hsl(220, 13%, 15%)',
+                            color: 'text.primary',
+                            border: '1px solid hsl(220, 13%, 20%)',
+                            '&:hover': {
+                              borderColor: 'primary.main',
+                              backgroundColor: 'primary.main',
+                              color: 'primary.contrastText',
+                            },
+                            transition: 'all 0.3s ease',
+                          }}
+                        />
+                      </Zoom>
+                    ))}
+                  </Box>
+                </Paper>
               ))}
             </Box>
+
           </Box>
+
+        </Slide>
+
+        {/* Interests Section */}
+        <Slide direction="up" in={loaded} timeout={1200}>
+          <Slide direction="up" in={loaded} timeout={1200}>
+            <Box sx={{ textAlign: 'center' }}>
+              <Typography
+                variant="h3"
+                sx={{
+                  mb: 4,
+                  color: 'primary.main',
+                  fontWeight: 600,
+                }}
+              >
+                Interests & Hobbies
+              </Typography>
+
+              <Box sx={{ display: 'grid', gap: 4, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, justifyContent: 'center' }}>
+                {Object.entries(groupedInterests).map(([category, items]) => (
+                  <Paper
+                    key={category}
+                    elevation={3}
+                    sx={{
+                      p: 3,
+                      background: 'linear-gradient(145deg, hsl(220, 13%, 11%), hsl(220, 13%, 13%))',
+                      border: '1px solid hsl(220, 13%, 18%)',
+                      textAlign: 'center',
+                    }}
+                  >
+                    <Typography
+                      variant="h5"
+                      sx={{ color: 'primary.main', fontWeight: 600, mb: 2 }}
+                    >
+                      {category}
+                    </Typography>
+                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, justifyContent: 'center' }}>
+                      {items.map((item, index) => (
+                        <Zoom key={item} in={loaded} timeout={700 + index * 100}>
+                          <Chip
+                            label={item}
+                            sx={{
+                              backgroundColor: 'hsl(220, 13%, 15%)',
+                              color: 'text.primary',
+                              border: '1px solid hsl(220, 13%, 20%)',
+                              '&:hover': {
+                                borderColor: 'primary.main',
+                                backgroundColor: 'primary.main',
+                                color: 'primary.contrastText',
+                                transform: 'translateY(-2px)',
+                                boxShadow: '0 4px 15px hsl(214, 84%, 56%, 0.3)',
+                              },
+                              transition: 'all 0.3s ease',
+                            }}
+                          />
+                        </Zoom>
+                      ))}
+                    </Box>
+                  </Paper>
+                ))}
+              </Box>
+            </Box>
+          </Slide>
+
         </Slide>
       </Container>
     </Box>

@@ -13,6 +13,7 @@ import {
   Button,
   Chip,
   Slide,
+  Stack,
 } from '@mui/material';
 import { Github, ExternalLink } from 'lucide-react';
 
@@ -48,6 +49,8 @@ import chat1 from '@/assets/projects/chat-1.jpg';
 import chat2 from '@/assets/projects/chat-2.jpg';
 import chat3 from '@/assets/projects/chat-3.jpg';
 import chat4 from '@/assets/projects/chat-4.jpg';
+import { StackedBarChartRounded } from '@mui/icons-material';
+
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -171,14 +174,19 @@ const Projects = () => {
             </Typography>
           </Box>
         </Slide>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2,1fr)",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "50px"
-          }} >
+        <Box
+          sx={{
+            display: 'grid',
+            gap: '50px',
+            gridTemplateColumns: {
+              xs: '1fr',
+              sm: '1fr 1fr',
+              lg: '1fr 1fr 1fr'
+            },
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
           {projects.map((project) => (
             <Grid item xs={12} sm={6} md={6} key={project.id}>
               <Card
@@ -216,19 +224,29 @@ const Projects = () => {
               </Card>
             </Grid>
           ))}
-        </div>
+        </Box>
 
         <Dialog open={!!selectedProject} onClose={() => setSelectedProject(null)} maxWidth="md" fullWidth>
           {selectedProject && (
             <DialogContent sx={{ bgcolor: '#1a1b1e', color: '#fff' }}>
               <DialogTitle>{selectedProject.title}</DialogTitle>
-              <Grid container spacing={2}>
+              <Box sx={{
+                display:"grid",
+                gridTemplateColumns:{
+                  xs:"1fr",
+                  sm:"1fr 1fr",
+                  lg:"1fr 1fr 1fr"
+                },
+                justifyContent: "center",
+                alignItems: "center",
+                gap:"10px"
+              }} spacing={2}>
                 {selectedProject.images.map((img, idx) => (
                   <Grid item xs={6} key={idx}>
-                    <img src={img} alt={selectedProject.title} style={{ width: '100%', borderRadius: 8 }} />
+                    <img src={img} alt={selectedProject.title} style={{ width: '100%',height:"30vh",objectFit:"cover", borderRadius: 8 }} />
                   </Grid>
                 ))}
-              </Grid>
+              </Box>
               <Box mt={2}>
                 <Typography variant="body1" color="gray">
                   {selectedProject.fullDescription}

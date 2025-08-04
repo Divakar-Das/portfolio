@@ -17,6 +17,8 @@ import {
 } from '@mui/icons-material';
 import { useEffect, useState } from 'react';
 import profilePhoto from '@/assets/profile-photo.jpg';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 
 const Index = () => {
   const [loaded, setLoaded] = useState(false);
@@ -26,13 +28,13 @@ const Index = () => {
   }, []);
 
   const skills = [
-    'HTML5', 'CSS3', 'JavaScript', 'React','Git', 'Material-UI', 'Responsive Design', 'REST APIs'
+    'React', 'HTML5', 'CSS3', 'JavaScript', 'GitHub', 'Material-UI', 'Java', 'Responsive Design', 'SQL', 'Node', 'VS Code', 'Eclipse IDE', 'Bootstrap', 'Express.js'
   ];
 
   const handleResumeDownload = () => {
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
-    link.download = 'Frontend_Developer_Resume.pdf';
+    link.href = '/Divakar_Resume.pdf';
+    link.download = 'Divakar_Resume.pdf';
     link.click();
   };
 
@@ -46,15 +48,16 @@ const Index = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Box 
-          sx={{ 
+        <Box
+          sx={{
             display: 'flex',
-            flexDirection: { xs: 'column', md: 'row' },
+            flexDirection: { xs: 'column-reverse', md: 'row' },
             alignItems: 'center',
             gap: 6,
             mb: 8
           }}
         >
+
           {/* Profile Section */}
           <Box sx={{ flex: 1, textAlign: { xs: 'center', md: 'left' } }}>
             <Slide direction="right" in={loaded} timeout={800}>
@@ -70,32 +73,34 @@ const Index = () => {
                     fontSize: { xs: '2.5rem', md: '3.5rem' },
                   }}
                 >
-                  Hi, I'm Divakar S
+                  Hi, I'm Divakar
                 </Typography>
-                
+
+                <Typography
+                  variant="body1"
+                  sx={{
+                    mb: 4,
+                    color: 'text.secondary',
+                    Width: '500px',
+                    fontSize: '1.1rem',
+                  }}
+                >
+                  Full Stack Web Developer | React & Frontend Specialist | Open to Software Opportunities
+                </Typography>
+
                 <Typography
                   variant="h4"
                   sx={{
                     mb: 3,
                     color: 'text.primary',
                     fontWeight: 400,
-                    fontSize: { xs: '1.2rem', md: '1.5rem' },
+                    textAlign: "start",
+                    fontSize: { xs: '1rem', md: '1.3rem' },
                   }}
                 >
-                  I build clean, modern, and responsive UIs.
+                  BCA graduate with hands-on experience in React.js, JavaScript, Java, and Node.js. Proficient in building scalable, responsive web applications and integrating RESTful APIs. Passionate about crafting clean UI and writing maintainable code
                 </Typography>
-                
-                <Typography
-                  variant="body1"
-                  sx={{
-                    mb: 4,
-                    color: 'text.secondary',
-                    maxWidth: '500px',
-                    fontSize: '1.1rem',
-                  }}
-                >
-                  Fresher Developer | React and Full Stack Enthusiast | Open to Opportunities
-                </Typography>
+
 
                 {/* Skills */}
                 <Box sx={{ mb: 4 }}>
@@ -186,11 +191,11 @@ const Index = () => {
             >
               Let's Connect
             </Typography>
-            
-            <Box 
-              sx={{ 
+
+            <Box
+              sx={{
                 display: 'grid',
-                gridTemplateColumns: { xs: '1fr', sm: 'repeat(3, 1fr)' },
+                gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' },
                 gap: 3,
                 justifyContent: 'center'
               }}
@@ -213,10 +218,10 @@ const Index = () => {
                   Email
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                  alex.johnson@example.com
+                  <a href="mailto:divakar07n@gmail.com">divakar07n@gmail.com</a>
                 </Typography>
               </Paper>
-              
+
               <Paper
                 sx={{
                   p: 3,
@@ -235,13 +240,40 @@ const Index = () => {
                   Phone
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                  +91-9876543210
+                  <a href="tel:9944176506">+91-9944176506</a>
                 </Typography>
               </Paper>
-              
+
               <Paper
                 component="a"
-                href="https://github.com/alexjohnson"
+                href="https://linkedin.com/in/divakar07"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  p: 3,
+                  textAlign: 'center',
+                  background: 'linear-gradient(145deg, hsl(220, 13%, 11%), hsl(220, 13%, 13%))',
+                  border: '1px solid hsl(220, 13%, 18%)',
+                  textDecoration: 'none',
+                  display: 'block',
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: '0 0 30px hsl(214, 84%, 56%, 0.2)',
+                  },
+                }}
+              >
+                <LinkedInIcon sx={{ fontSize: 40, color: 'primary.main', mb: 2 }} />
+                <Typography variant="h6" sx={{ mb: 1, color: 'text.primary' }}>
+                  LinkedIn
+                </Typography>
+                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                  linkedin.com/in/divakar07 
+                </Typography>
+              </Paper>
+              <Paper
+                component="a"
+                href="https://github.com/Divakar-Das"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
@@ -263,7 +295,7 @@ const Index = () => {
                   GitHub
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                  github.com/alexjohnson
+                   github.com/Divakar-Das
                 </Typography>
               </Paper>
             </Box>

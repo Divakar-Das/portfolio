@@ -28,58 +28,47 @@ const Internship = () => {
     {
       id: 1,
       type: 'Internship',
-      company: 'TechCorp Solutions',
-      role: 'Frontend Developer Intern',
-      duration: 'June 2023 - August 2023',
-      description: 'Worked on developing responsive web applications using React and Material-UI. Collaborated with senior developers to implement new features and optimize existing code.',
-      technologies: ['React', 'JavaScript', 'Material-UI', 'Git', 'REST APIs'],
+      company: 'Soft Tech Ashram',
+      role: 'Full Stack Developer Trainee Intern',
+      duration: 'Feb 2025 - July 2025',
+      description:
+        'Worked on real-time projects using HTML5, CSS3, React.js, and Material UI. Gained hands-on experience with the basics of Node.js and Express.js. Collaborated in Agile teams through Git workflows, daily stand-ups, sprint planning, and timesheet tracking.',
+      technologies: ['React.js', 'JavaScript', 'Material UI', 'GitHub', 'REST APIs', 'Node.js'],
       achievements: [
         'Improved website performance by 30%',
-        'Developed 5 reusable UI components',
-        'Fixed 20+ bug reports'
+        'Built a responsive Amazon Clone using React and Material UI',
+        'Mentored junior students',
+        'Practiced collaborative workflows using Git and GitHub',
       ]
-    },
+    }
+    ,
     {
       id: 2,
       type: 'Training',
-      company: 'FullStack Academy',
-      role: 'Full Stack Web Development',
-      duration: 'January 2023 - May 2023',
-      description: 'Intensive 5-month program covering modern web development technologies. Built multiple projects from frontend to backend deployment.',
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Node.js', 'MongoDB'],
+      company: 'Besant Technologies',
+      role: 'Java Full Stack Development',
+      duration: 'Aug 2024 - Feb 2025',
+      description: 'Gained hands-on experience in core web development technologies including Java, HTML5, CSS3, JavaScript (ES6), and React.js.',
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Java', 'SQL', 'React'],
       achievements: [
-        'Completed 8 full-stack projects',
-        'Achieved 95% course completion rate',
-        'Mentored 3 junior students'
+        'Developed a weather app using JavaScript and OpenWeather API',
+        'Completed mini-projects involving Java, REST APIs, and SQL',
       ]
+
     }
   ];
 
   const certificates = [
     {
-      name: 'React Developer Certification',
-      issuer: 'Meta',
-      date: 'July 2023',
-      credentialId: 'META-REACT-2023-07'
+      name: 'Full Stack Developer Trainee Certification',
+      issuer: 'SoftTechAshram',
+      date: 'July 2025',
     },
     {
-      name: 'JavaScript Algorithms and Data Structures',
-      issuer: 'freeCodeCamp',
-      date: 'May 2023',
-      credentialId: 'FCC-JS-ALGO-2023'
+      name: 'Java Full Stack Developement Certification',
+      issuer: 'Besant Technologies',
+      date: 'Feb 2025',
     },
-    {
-      name: 'Responsive Web Design',
-      issuer: 'freeCodeCamp',
-      date: 'March 2023',
-      credentialId: 'FCC-RWD-2023'
-    },
-    {
-      name: 'Frontend Development Libraries',
-      issuer: 'freeCodeCamp',
-      date: 'June 2023',
-      credentialId: 'FCC-FRONTEND-2023'
-    }
   ];
 
   return (
@@ -135,7 +124,7 @@ const Internship = () => {
             >
               Professional Experience
             </Typography>
-            
+
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
               {experiences.map((exp, index) => (
                 <Zoom
@@ -302,12 +291,12 @@ const Internship = () => {
             >
               Certifications & Courses
             </Typography>
-            
-            <Box 
-              sx={{ 
+
+            <Box
+              sx={{
                 display: 'grid',
                 gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', lg: '1fr 1fr' },
-                gap: 3 
+                gap: 3
               }}
             >
               {certificates.map((cert, index) => (
@@ -359,19 +348,6 @@ const Internship = () => {
                       >
                         Issued: {cert.date}
                       </Typography>
-                      <Typography
-                        variant="caption"
-                        sx={{
-                          color: 'text.secondary',
-                          fontFamily: 'monospace',
-                          backgroundColor: 'hsl(220, 13%, 15%)',
-                          px: 1,
-                          py: 0.5,
-                          borderRadius: 1,
-                        }}
-                      >
-                        ID: {cert.credentialId}
-                      </Typography>
                     </CardContent>
                   </Card>
                 </Zoom>
@@ -416,10 +392,7 @@ const Internship = () => {
                   mb: 3,
                 }}
               >
-                I'm actively seeking opportunities to apply my skills in a professional environment. 
-                My goal is to contribute to innovative projects while continuing to learn and grow 
-                as a frontend developer. I'm particularly interested in roles that involve modern 
-                React development, user experience optimization, and collaborative team environments.
+               I'm actively seeking opportunities to apply my full stack development skills in a professional environment. My goal is to contribute to impactful software projects while continuing to grow as a developer. I'm particularly interested in roles that involve modern React development, backend integration, and collaborative team-based problem solving.
               </Typography>
               <Typography
                 variant="h6"
