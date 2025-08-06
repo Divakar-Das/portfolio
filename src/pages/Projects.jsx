@@ -42,6 +42,11 @@ import xo2 from "@/assets/projects/xo2.png"
 import xo3 from "@/assets/projects/xo3.png"
 import xo4 from "@/assets/projects/xo4.png"
 
+import weather1 from "@/assets/projects/weather1.png"
+import weather2 from "@/assets/projects/weather2.png"
+import weather3 from "@/assets/projects/weather3.png"
+import weather4 from "@/assets/projects/weather4.png"
+
 import rps1 from "@/assets/projects/rps1.png"
 import rps3 from "@/assets/projects/rps3.png"
 import rps4 from "@/assets/projects/rps4.png"
@@ -65,7 +70,7 @@ const Projects = () => {
       description: 'Built a fully responsive e-commerce website inspired by Amazon using React and Material UI for a clean, modern UI.',
       fullDescription: 'Implemented sign-up and login forms with regex validation to ensure proper user input.Used Redux for global state management (e.g., user info, product data). Integrated APIs using Axios, and added interceptors to manage loading screens and handle request errors.Applied lazy loading to improve performance by loading components only when needed.Created structured category and subcategory views for better product navigation. Designed with mobile-first principles to ensure smooth use across all devices.',
       images: [ecommerce1, ecommerce2, ecommerce3, ecommerce4],
-      technologies: ['React', 'Material UI', 'JavaScript', 'HTML/CSS', 'Redux', 'axios', 'Interceptors', 'Lazy Loading','REST APIs'],
+      technologies: ['React', 'Material UI', 'JavaScript', 'HTML/CSS', 'Redux', 'axios', 'Interceptors', 'Lazy Loading', 'REST APIs'],
       githubLink: 'https://github.com/Divakar-Das/amozon',
       demoLink: 'https://ecommerce-amozon.netlify.app/landing',
     },
@@ -79,14 +84,14 @@ const Projects = () => {
       githubLink: 'https://github.com/Divakar-Das/javascript_CRUD',
       demoLink: 'https://javascriptcrudop.netlify.app/',
     },
-    
+
     {
       id: 3,
       title: 'A-mart (Social Media Accounts Market Platform) ',
       description: 'Built this website for buying and selling social media accounts such as instagram, facebook. where users can contact sellers through provided contact information.',
       fullDescription: 'Developed a responsive web platform for buying and selling social media accounts, including platforms like Instagram and Facebook. The website allows sellers to list accounts with details such as niche, followers, pricing, and contact information. Buyers can browse listings and directly connect with sellers via the provided contact details, enabling seamless and secure communication.',
       images: [amart1, amart2, amart3, amart4],
-      technologies: ['HTML','CSS','JavaScript','Bootstrap','REST APIs', 'Local Storage'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'REST APIs', 'Local Storage'],
       githubLink: 'https://github.com/Divakar-Das/A-mart',
       demoLink: 'https://a-mart3301.netlify.app/',
     },
@@ -112,10 +117,20 @@ const Projects = () => {
     },
     {
       id: 6,
+      title: 'Weather Website',
+      description: 'A responsive weather app built using HTML, CSS, and JavaScript that fetches real-time weather data based on user input using the OpenWeatherMap API.',
+      fullDescription: 'This weather application allows users to check live weather updates for any city across the globe. It is built using HTML, CSS, and vanilla JavaScript, and integrates with the OpenWeatherMap API to display real-time temperature, humidity, wind speed, pressure, and weather conditions with emoji icons. The design is fully responsive and adapts seamlessly to all screen sizes.',
+      images: [weather1, weather2, weather3, weather4],
+      technologies: ['JavaScript', 'OpenWeatherAPI', 'HTML', 'CSS'],
+      githubLink: 'https://github.com/Divakar-Das/weather-website',
+      demoLink: 'https://live-climate.netlify.app/',
+    },
+    {
+      id: 7,
       title: 'Rock Paper Scissor',
       description: 'A responsive Rock Paper Scissors game built with HTML, CSS, and JavaScript featuring an attractive theme and smooth gameplay.',
       fullDescription: 'This is a visually appealing Rock Paper Scissors game developed using HTML, CSS, and JavaScript. It includes animations, instant result logic, and a clean, responsive layout. Designed to provide an engaging and fun user experience across all devices.',
-      images: [rps1,rps3,rps4,rps5],
+      images: [rps1, rps3, rps4, rps5],
       technologies: ['JavaScript', 'HTML', 'CSS', 'Game Logics'],
       githubLink: 'https://github.com/Divakar-Das/FrontendDevelopment/tree/main/rps',
       demoLink: 'https://rps3301.netlify.app/',
