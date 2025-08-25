@@ -17,6 +17,11 @@ import {
 } from '@mui/material';
 import { Github, ExternalLink, Calendar1 } from 'lucide-react';
 
+import job1 from '@/assets/projects/job_app1.png';
+import job2 from '@/assets/projects/job_app2.png';
+import job3 from '@/assets/projects/job_app3.png';
+import job4 from '@/assets/projects/job_app4.png';
+
 import ecommerce1 from '@/assets/projects/ecommerce-1.png';
 import ecommerce2 from '@/assets/projects/ecommerce-2.png';
 import ecommerce3 from '@/assets/projects/ecommerce-3.png';
@@ -66,6 +71,16 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: 'Job Admin Panel – Full-Stack Web Application',
+      description: 'Designed and developed a full-stack job management platform to efficiently manage and track job listings.',
+      fullDescription: 'Advanced Filtering by location, role, job type, and salary range for precise job search Responsive UI ensuring seamless experience across all devices, Secure Backend with Express.js & MySQL integration, Scalable Cloud Database (Aiven Cloud) for performance and reliability, Clean & Professional Design using Material UI, This project showcases my ability to deliver end-to-end web solutions with strong frontend design, efficient backend logic, and optimized database management — ready for real-world deployment.',
+      images: [job1, job2, job3, job4],
+      technologies: ['React', 'Material UI', 'JavaScript', 'Node.js', 'Express.js', 'MySQL', 'Aiven Cloud', 'HTML/CSS', 'axios','REST APIs'],
+      githubLink: 'https://github.com/Divakar-Das/job-admin-panel',
+      demoLink: 'https://job-admin-panel.netlify.app/',
+    },
+    {
+      id: 2,
       title: 'Amazon-Clone-Ecommerce-Website',
       description: 'Built a fully responsive e-commerce website inspired by Amazon using React and Material UI for a clean, modern UI.',
       fullDescription: 'Implemented sign-up and login forms with regex validation to ensure proper user input.Used Redux for global state management (e.g., user info, product data). Integrated APIs using Axios, and added interceptors to manage loading screens and handle request errors.Applied lazy loading to improve performance by loading components only when needed.Created structured category and subcategory views for better product navigation. Designed with mobile-first principles to ensure smooth use across all devices.',
@@ -75,7 +90,7 @@ const Projects = () => {
       demoLink: 'https://ecommerce-amozon.netlify.app/landing',
     },
     {
-      id: 2,
+      id: 3,
       title: 'Javascript CRUD',
       description: 'This project has strong logical code. I have included regular expressions (regex) for validating input fields.',
       fullDescription: 'This project demonstrates my understanding of JavaScript logic, local storage usage, and form validation techniques. It’s a great example of how to build a dynamic and interactive web application without using a backend. The update and delete features help manage the data efficiently, making it user-friendly and practical for real-time use.',
@@ -86,7 +101,7 @@ const Projects = () => {
     },
 
     {
-      id: 3,
+      id: 4,
       title: 'A-mart (Social Media Accounts Market Platform) ',
       description: 'Built this website for buying and selling social media accounts such as instagram, facebook. where users can contact sellers through provided contact information.',
       fullDescription: 'Developed a responsive web platform for buying and selling social media accounts, including platforms like Instagram and Facebook. The website allows sellers to list accounts with details such as niche, followers, pricing, and contact information. Buyers can browse listings and directly connect with sellers via the provided contact details, enabling seamless and secure communication.',
@@ -96,7 +111,7 @@ const Projects = () => {
       demoLink: 'https://a-mart3301.netlify.app/',
     },
     {
-      id: 4,
+      id: 5,
       title: 'Clinic Calendar App - React Project',
       description: 'Developed a responsive and user-friendly clinic scheduling app using React and JavaScript',
       fullDescription: 'Dynamic calendar with daily, weekly, and monthly views Appointment booking and scheduling Clean and intuitive UI/UX Fully responsive design for mobile and desktop',
@@ -106,7 +121,7 @@ const Projects = () => {
       demoLink: 'https://task-manager-demo.netlify.app',
     },
     {
-      id: 5,
+      id: 6,
       title: 'Tic Tac Toe',
       description: 'Built a Tic Tac Toe game with a sleek and modern design using HTML, CSS, and JavaScript!',
       fullDescription: 'XO Game is a responsive web-based Tic-Tac-Toe application built using HTML, CSS, and JavaScript. It allows two players to take turns placing X and O in a 3x3 grid with instant win/tie detection. The layout adjusts smoothly across all screen sizes for an engaging user experience.',
@@ -116,7 +131,7 @@ const Projects = () => {
       demoLink: 'https://xo3301.netlify.app',
     },
     {
-      id: 6,
+      id: 7,
       title: 'Weather Website',
       description: 'A responsive weather app built using HTML, CSS, and JavaScript that fetches real-time weather data based on user input using the OpenWeatherMap API.',
       fullDescription: 'This weather application allows users to check live weather updates for any city across the globe. It is built using HTML, CSS, and vanilla JavaScript, and integrates with the OpenWeatherMap API to display real-time temperature, humidity, wind speed, pressure, and weather conditions with emoji icons. The design is fully responsive and adapts seamlessly to all screen sizes.',
@@ -126,7 +141,7 @@ const Projects = () => {
       demoLink: 'https://live-climate.netlify.app/',
     },
     {
-      id: 7,
+      id: 8,
       title: 'Rock Paper Scissor',
       description: 'A responsive Rock Paper Scissors game built with HTML, CSS, and JavaScript featuring an attractive theme and smooth gameplay.',
       fullDescription: 'This is a visually appealing Rock Paper Scissors game developed using HTML, CSS, and JavaScript. It includes animations, instant result logic, and a clean, responsive layout. Designed to provide an engaging and fun user experience across all devices.',
